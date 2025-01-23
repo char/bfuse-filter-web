@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "build": "deno run -A ./_build.ts"
+  },
+  "imports": {
+    "@char/aftercare": "jsr:@char/aftercare@^0.2.0",
+    "@mary/base32": "jsr:@mary/base32@^0.1.0",
+    "@std/encoding": "jsr:@std/encoding@^1.0.6",
+    "xor-filter/": "./rust/pkg/"
+  },
+  "compilerOptions": {
+    "lib": [
+      "deno.window",
+      "dom"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@char/aftercare"
+  }
+}
