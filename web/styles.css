@@ -1,33 +1,12 @@
 :root {
   background: #cde6fb;
-  color: black;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Helvetica Neue",
-    Roboto,
-    Cantarell,
-    sans-serif;
   font-size: 1.125rem;
-
-  --primary: #fc5bcd;
-  --primary-600: #fa68d0;
-  --font-size-h1: 1.5rem;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-}
-
-main,
-footer {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0;
 }
 
 h1 {
@@ -43,7 +22,7 @@ footer {
   padding: 1em;
   border: 1px solid black;
   background: white;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 
   &:is(footer) {
     text-align: start;
@@ -60,7 +39,7 @@ footer {
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 800px) {
   :root {
     background: unset;
   }
@@ -94,7 +73,6 @@ form {
 }
 
 .explainer {
-  font-size: 1.125em;
   max-width: 60ch;
   margin: 0 auto;
 }
@@ -104,12 +82,12 @@ form {
   border: 1px solid black;
   border-radius: 4px;
   margin: 1em 0;
-  font-size: 1.25em;
+  font-size: 1.125em;
 
   &.match {
     border-color: #00cb3d;
   }
   &.not-match {
-    border-color: var(--red);
+    border-color: #cb0025;
   }
 }

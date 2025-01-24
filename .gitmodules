@@ -1,0 +1,3 @@
+[submodule "vendor/char.css"]
+	path = vendor/char.css
+	url = https://git.lavender.software/char/char.css.git
