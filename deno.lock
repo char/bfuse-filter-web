@@ -3,6 +3,7 @@
   "specifiers": {
     "jsr:@char/aftercare@0.2": "0.2.0",
     "jsr:@luca/esbuild-deno-loader@0.11": "0.11.1",
+    "jsr:@mary/base32@0.1": "0.1.0",
     "jsr:@std/bytes@^1.0.2": "1.0.4",
     "jsr:@std/cli@1": "1.0.11",
     "jsr:@std/dotenv@0.225": "0.225.3",
@@ -29,6 +30,9 @@
         "jsr:@std/encoding",
         "jsr:@std/path@^1.0.6"
       ]
+    },
+    "@mary/base32@0.1.0": {
+      "integrity": "e9b163a66ae858339906d951f408f539d2921233b33e2ba30358eca9caa2b6cd"
     },
     "@std/bytes@1.0.4": {
       "integrity": "11a0debe522707c95c7b7ef89b478c13fb1583a7cfb9a85674cd2cc2e3a28abc"
@@ -152,6 +156,9 @@
         "@esbuild/win32-x64"
       ]
     }
+  },
+  "remote": {
+    "https://char.lt/esm/pipe.ts": "e40365c4d5032fc28d27712c7421248240d0b78b5a5abcd8d46bff1852d5d615"
   },
   "workspace": {
     "dependencies": [
