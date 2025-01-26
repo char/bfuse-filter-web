@@ -22,6 +22,9 @@ function generateFilter() {
   const input = generator.querySelector("textarea")!;
   const output = generator.querySelector("pre")!;
 
-  const lines = input.value.split("\n").filter(s => s);
-  output.textContent = generate(lines).pipe(filterToString);
+  output.textContent = input.value
+    .split("\n")
+    .filter(s => s)
+    .pipe(generate)
+    .pipe(filterToString);
 }

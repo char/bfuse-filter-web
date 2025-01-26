@@ -51,11 +51,10 @@ function checkFilter() {
   potentiallyInSet.remove();
   notInSet.remove();
 
-  const filter = checker
-    .querySelector("textarea")!
-    .value.pipe(s => s.trim())
-    .pipe(stringToFilter);
-  const entry = checker.querySelector("input")!.value;
+  const filterText = checker.querySelector("textarea")!;
+  const entry = checker.querySelector("input")!;
 
-  checker.append(check(filter, entry) ? potentiallyInSet : notInSet);
+  const filter = filterText.value.pipe(s => s.trim()).pipe(stringToFilter);
+
+  checker.append(check(filter, entry.value) ? potentiallyInSet : notInSet);
 }
