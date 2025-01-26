@@ -9,8 +9,8 @@ import { generator } from "./generator.tsx";
 
 const main = document.body.querySelector("main")!;
 
-activeTab.subscribeImmediate((value) => {
-  checker.remove();
-  generator.remove();
-  main.append({ checker, generator }[value]);
+activeTab.subscribeImmediate(value => {
+  const tabs = { checker, generator };
+  Object.values(tabs).forEach(e => e.remove());
+  main.append(tabs[value]);
 });

@@ -22,22 +22,18 @@ export const checker = (
     <header>
       <h1>binary fuse filter checker</h1>
 
-      <button _tap={onClick(() => activeTab.set("generator"))}>
-        generator
-      </button>
+      <button _tap={onClick(() => activeTab.set("generator"))}>generator</button>
     </header>
 
     <div className="explainer">
       <p>
-        binary fuse filters are compact probabilistic data structures that can
-        determine whether an element is <em>potentially</em> or{" "}
-        <em>definitely not</em> contained in a set. i.e. there are no
-        false-negatives but there may be false-positives.
+        binary fuse filters are compact probabilistic data structures that can determine whether
+        an element is <em>potentially</em> or <em>definitely not</em> contained in a set. i.e.
+        there are no false-negatives but there may be false-positives.
       </p>
 
       <p>
-        enter somebody's <em>filter code</em> below and an entry to exactly
-        match.
+        enter somebody's <em>filter code</em> below and an entry to exactly match.
         <br />
         you may need more information, such as the format of the entries.
       </p>
@@ -57,7 +53,7 @@ function checkFilter() {
 
   const filter = checker
     .querySelector("textarea")!
-    .value.pipe((s) => s.trim())
+    .value.pipe(s => s.trim())
     .pipe(stringToFilter);
   const entry = checker.querySelector("input")!.value;
 
